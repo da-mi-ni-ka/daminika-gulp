@@ -1,6 +1,6 @@
 // Помощники
 // @import 'mixins/mixins';//миксины scss
-// @import 'main/stylesheet';// шрифты
+@import 'main/stylesheet';// шрифты
 // @import 'main/parameters';// переменные
 
 //Общее
@@ -11,3 +11,185 @@
 //Компоненты(все файлы в папке components) -> добавляются автоматически в стили, импортить сюда их не нужно
 
 // дальше можно писать все стили сайта в этот файл, или писать их в компонентах
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+// .form {}
+// .fieldgroup-wrap {
+//     margin: 0 0 10px;
+// }
+// .fieldgroup {
+//     display: inline;
+//     cursor: pointer;
+//     &__text {
+//         position: relative;
+//         padding-left: 20px;
+//         &::before {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             content: "";
+//             height: 16px;
+//             width: 16px;
+//             border-radius: 5px;
+//             border: 1px solid green;
+//         }
+//         &::after {
+//             position: absolute;
+//             content: "";
+//             top: 0;
+//             left: 0;
+//             height: 8px;
+//             width: 8px;
+//             border-radius: 5px;
+//         }
+//     }
+// }
+
+// .radio {
+//     opacity: 0;
+//     visibility: hidden;
+//     width: 1px;
+//     height: 1px;
+
+//     &:checked + .fieldgroup__text::after {
+//         background-color: green;
+//         top: 5px;
+//         left: 5px;
+//     }
+// }
+
+.container {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.header1 {
+    border-bottom: 1px solid #838181;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 199;
+
+    // &.scroll {
+    //     background: blue;
+    // }
+}
+.nav {
+    &__list {
+        display: flex;
+    }
+    &__li {}
+    &__link {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        padding: 35px 10px;
+        border-bottom: 2px solid rgba(82, 82, 82, 0);
+        transition: border-bottom-color ease 0.3s;
+    
+        &.active,
+        &:hover {
+            border-bottom: 2px solid #fff;
+        }
+    }
+}
+
+.section2 {
+    background-image: url(../imgs/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+.h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #4985FF;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px;
+    padding: 13px 54px;
+    text-decoration: none;
+}
+
+.works {
+    
+    padding: 93px 0 0;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 490px; //%
+        background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
+        z-index: -1;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 56px;
+    }
+    &__title {
+        color: #FFFFFF;
+        max-width: 520px;
+    }
+    &__btn {
+        margin: 0 0 10px;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        
+    }
+}
+
+.work {
+    flex: 0 0 calc(100%/3);
+    max-width: calc(100%/3);
+    padding: 0 15px;
+
+
+    &__img-wrap {}
+    &__img {
+        border-radius: 10px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 25px;
+        color: #999999;
+    }
+    &__link {
+        color: #4985FF;
+    }
+}

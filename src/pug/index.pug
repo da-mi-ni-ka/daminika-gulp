@@ -6,4 +6,47 @@ block vars
     - var pageHeaderClass = ''
 
 block content
-    p контент index страницы
+    //- form.form(action="#")
+    //-     mixin fieldgroup (text)
+    //-         .fieldgroup-wrap
+    //-             label.fieldgroup
+    //-                 input(type="radio" name="name1").radio
+    //-                 span.fieldgroup__text=text
+    //-     +fieldgroup ("Input1")
+    //-     +fieldgroup ("Input2")
+    //-     +fieldgroup ("Input3")
+
+    header.header1.scroll
+        .container
+            nav.nav
+                ul.nav__list
+                    li.nav__li
+                        a(href="#").nav__link.active Главная
+                    li.nav__li
+                        a(href="#").nav__link Наши проекты
+                    li.nav__li
+                        a(href="#").nav__link Услуги
+                    li.nav__li
+                        a(href="#").nav__link Новости
+                    li.nav__li
+                        a(href="#").nav__link Контакты
+    section.section2
+    section.works
+        .container
+            .works__header
+                h2.works__title.h2 Наши работы, на которых мы специализируемся
+                .works__btn
+                    a(href="#").btn Все услуги
+            .works__row
+                mixin work ()
+                 .work
+                    .work__img-wrap
+                        img(src="./assets/imgs/img1.png" alt="img").work__img
+                    .work__title 
+                        b 01. 
+                        | Исследование и упаковка
+                    .work__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                    a(href="#").work__link Подробнее
+                +work ()
+                +work ()
+                +work ()
