@@ -50,3 +50,53 @@ block content
                 +work ()
                 +work ()
                 +work ()
+    .swiper-wr
+        .swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+                .swiper-slide
+                    img(src="https://picsum.photos/300/200", alt="img")
+            .swiper-pagination
+        .swiper-button-prev    
+        .swiper-button-next
+
+
+    .inner      
+        form.search-form(action="#")
+            input(type="search" placeholder="Введите запрос").search-form__field
+            button.search-form__btn
+
+    .container-inner-new
+        a.border-line(href="#") Выберите нужный раздел
+
+
+    .grid-wrap
+        .grid-container
+            mixin grid-el(title, img)
+                .grid-el
+                    .grid-el__title=title
+                    a.grid-el__link(href="#")
+                        img.grid-el__img(src=img, alt=title)
+            +grid-el("Блузки", "./assets/imgs/shop1.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
+            +grid-el("Блузки", "./assets/imgs/shop1.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
+            +grid-el("Брюки", "./assets/imgs/shop2.jpg")
